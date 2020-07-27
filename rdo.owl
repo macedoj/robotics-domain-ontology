@@ -1,0 +1,699 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/macedoj/robotics-domain-ontology"
+     xml:base="https://github.com/macedoj/robotics-domain-ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdo="https://github.com/macedoj/robotics-domain-ontology#rdo:"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="https://github.com/macedoj/robotics-domain-ontology">
+        <owl:versionIRI rdf:resource="https://github.com/macedoj/robotics-domain-ontology/v0.0.1"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2020-06-10/iao.owl"/>
+        <rdo:comments xml:lang="en">It contains RDO-specific classes and axioms as well as imports from:
+	1. Information Artifact Ontology (IAO)
+	2. Units of Measurement Ontology (UO).</rdo:comments>
+        <rdo:contributor xml:lang="en">Juliano Macedo</rdo:contributor>
+        <rdo:defaultLenguage xml:lang="en">en</rdo:defaultLenguage>
+        <rdo:description xml:lang="en">The Robotics Domain Ontology (RDO) describes the basic entities of a common Indoor Robot domain.</rdo:description>
+        <rdo:license xml:lang="en">https://github.com/macedoj/robotics-domain-ontology/blob/master/LICENSE</rdo:license>
+        <rdo:title xml:lang="en">Robotics Domain Ontology (RDO)</rdo:title>
+        <rdo:version xml:lang="en">0.0.1-SNAPSHOT</rdo:version>
+        <rdo:versionDate xml:lang="en">2020-07-26</rdo:versionDate>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#rdo:comments -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#rdo:comments"/>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#rdo:contributor -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#rdo:contributor"/>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#rdo:defaultLenguage -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#rdo:defaultLenguage"/>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#rdo:description -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#rdo:description"/>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#rdo:license -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#rdo:license"/>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#rdo:title -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#rdo:title"/>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#rdo:version -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#rdo:version"/>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#rdo:versionDate -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#rdo:versionDate"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Measure_Wavelength -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#Measure_Wavelength">
+        <obo:IAO_0000115 xml:lang="en">Define wave amplitude and wavelength.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Wavelength</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">measure wavelength</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#blocked_by -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#blocked_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <obo:IAO_0000112 xml:lang="en">A Robot could be blocked by an Obstacle.</obo:IAO_0000112>
+        <rdfs:label xml:lang="en">blocked by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#calculate_distance -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#calculate_distance">
+        <obo:IAO_0000115 xml:lang="en"></obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Distance</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">calculate distance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#calculate_volume -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#calculate_volume">
+        <obo:IAO_0000119 xml:lang="en">The volume of a shape is the measure of how much three-dimensional space that shape takes up.[1] You can also think of the volume of a shape as how much water (or air, or sand, etc.) the shape could hold if it was filled completely. Common units of volume include cubic centimeters (cm3), cubic meters (m3), cubic inches (in3), and cubic feet (ft3).</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">https://www.wikihow.com/Calculate-Volume</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">calculate volume</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#execute -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#execute">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <obo:IAO_0000112 xml:lang="en">Software is executed by a machine or another system.</obo:IAO_0000112>
+        <rdfs:label xml:lang="en">execute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#operates_in -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/macedoj/robotics-domain-ontology#operates_in">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <obo:IAO_0000112 xml:lang="en">A Robot operates in a Robot Environment</obo:IAO_0000112>
+        <rdfs:label xml:lang="en">operates in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000030 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000030">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000122"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Height"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Volume"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Width"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Robot_Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000122 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000122">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000419"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Centimeters"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Autonomy -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Autonomy">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115 xml:lang="en">An autonomous robot, also known as simply an autorobot or autobot, is a robot that performs behaviors or tasks with a high degree of autonomy (without external influence). Autonomous robotics is usually considered to be a subfield of artificial intelligence, robotics, and information engineering.</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Autonomous_robot</obo:IAO_0000119>
+        <rdfs:label>Autonomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Centimeters -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Centimeters">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
+        <obo:IAO_0000115 xml:lang="en">A centimetre (international spelling) or centimeter (American spelling) (SI symbol cm) is a unit of length in the metric system, equal to one hundredth of a metre, centi being the SI prefix for a factor of 1/100.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Centimetre</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Centimeters (cm)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Chair -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Chair">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">A chair is a type of seat. Its primary features are two pieces of a durable material, attached as back and seat to one another at a 90° or slightly greater angle, with usually the four corners of the horizontal seat attached in turn to four legs—or other parts of the seat&apos;s underside attached to three legs or to a shaft about which a four-arm turnstile on rollers can turn—strong enough to support the weight of a person who sits on the seat (usually wide and broad enough to hold the lower body from the buttocks almost to the knees) and leans against the vertical back (usually high and wide enough to support the back to the shoulder blades).</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Chair</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Chair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#CollisionAvoidanceSystem -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#CollisionAvoidanceSystem">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
+        <obo:IAO_0000115 xml:lang="en">Collision Avoidance System (CAS), also known as a pre-crash system, forward collision warning system, or collision mitigation system, is an automobile safety system designed to prevent or reduce the severity of a collision</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Collision_avoidance_system</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Collision Avoidance System (CAS)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Cubic_Centimeters -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Cubic_Centimeters">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
+        <obo:IAO_0000115 xml:lang="en">A cubic centimetre (or cubic centimeter in US English) (SI unit symbol: cm3; non-SI abbreviations: cc and ccm) is a commonly used unit of volume that corresponds to the volume of a cube that measures 1 cm x 1 cm × 1 cm.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Cubic_centimetre</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Cubic Centimeters (cm³)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Height -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Height">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000051"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000419"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Centimeters"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 xml:lang="en">For example, &quot;The height of that building is 50 m&quot; or &quot;The height of an airplane in-flight is about 10,000 m&quot;.</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">Height is measure of vertical distance, either vertical extent (how &quot;tall&quot; something or someone is) or vertical position (how &quot;high&quot; a point is).</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Height</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Height</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Hyperspectral_Sensor -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Hyperspectral_Sensor">
+        <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Image_Sensor"/>
+        <owl:disjointWith rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Multispectral_Sensor"/>
+        <obo:IAO_0000115 xml:lang="en">Hyperspectral imaging, like other spectral imaging, collects and processes information from across the electromagnetic spectrum.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Hyperspectral_imaging</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Hyperspectral Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Image_Sensor -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Image_Sensor">
+        <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Measure_Wavelength"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Obstacle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Proximity_Sensor"/>
+        <obo:IAO_0000115 xml:lang="en">An image sensor or imager is a sensor that detects and conveys information used to make an image.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Image_sensor</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Image Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Lambda -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Lambda">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
+        <obo:IAO_0000112 xml:lang="en">Wavelength is commonly designated by the Greek letter lambda (λ).</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">Lambda (uppercase Λ, lowercase λ) is the 11th letter of the Greek alphabet, representing the sound .</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Lambda</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Lambda (λ)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#LiDAR -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#LiDAR">
+        <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Proximity_Sensor"/>
+        <owl:disjointWith rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Ultrasonic_Sensor"/>
+        <obo:IAO_0000115 xml:lang="en">LiDAR is a method for measuring distances (ranging) by illuminating the target with laser light and measuring the reflection with a sensor.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Lidar</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">LiDAR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Measure -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Measure">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000419"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Centimeters"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">To discover the exact size or amount of something.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://dictionary.cambridge.org/us/dictionary/english/measure</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Measure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Mobility -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Mobility">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115 xml:lang="en">Mobile robots have the capability to move around in their environment and are not fixed to one physical location.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Mobile_robot</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Mobility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Multispectral_Sensor -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Multispectral_Sensor">
+        <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Image_Sensor"/>
+        <obo:IAO_0000115 xml:lang="en">A multispectral image is one that captures image data within specific wavelength ranges across the electromagnetic spectrum.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Multispectral_image</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Multispectral Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Obstacle -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Obstacle">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">An obstacle (also called a barrier, impediment, or stumbling block) is an object, thing, action or situation that causes an obstruction.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Obstacle</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Obstacle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Physical_Environment -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Physical_Environment">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <obo:IAO_0000115 xml:lang="en">The physical environment includes land, air, water, plants and animals, buildings and other infrastructure, and all of the natural resources that provide our basic needs and opportunities for social and economic development.</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.socialreport.msd.govt.nz/2003/physical-environment/physical-environment.shtml</obo:IAO_0000119>
+        <rdfs:label>Physical Environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Position -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Position">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000419"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Centimeters"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">In geometry, a position or position vector, also known as location vector or radius vector, is a Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O. Frequently this is used in two-dimensional or three-dimensional space.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Position_(geometry)</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Proximity_Sensor -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Proximity_Sensor">
+        <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/macedoj/robotics-domain-ontology#calculate_distance"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Obstacle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A proximity sensor is a sensor able to detect the presence of nearby objects without any physical contact.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Proximity_sensor</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Proximity Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Robot -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Robot">
+        <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#equipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Autonomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Mobility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/macedoj/robotics-domain-ontology#blocked_by"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Obstacle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/macedoj/robotics-domain-ontology#execute"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/macedoj/robotics-domain-ontology#operates_in"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Robot_Environment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Sensor"/>
+        <obo:IAO_0000115 xml:lang="en">A robot is a machine, especially one programmable by a computer, capable of carrying out a complex series of actions automatically.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Robot</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Robot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Robot_Environment -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Robot_Environment">
+        <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Physical_Environment"/>
+        <obo:IAO_0000115 xml:lang="en">Generally speaking, a robot can physically interact with the environment by the sequential execution of two actions: that of achieving a suitable contact configuration, and the subsequent motion required by the task.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://link.springer.com/chapter/10.1007/978-3-642-33241-8_2</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Robot Environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Sensor -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Sensor">
+        <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#equipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Robot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/macedoj/robotics-domain-ontology#calculate_volume"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Obstacle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">Sensor is a device, module, machine, or subsystem whose purpose is to detect events or changes in its environment and send the information to other electronics, frequently a computer processor.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Sensor</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Table -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Table">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">A table is an item of furniture with a flat top and one or more legs, used as a surface for working at, eating from or on which to place things.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Table_(furniture)</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Table</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Ultrasonic_Sensor -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Ultrasonic_Sensor">
+        <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Proximity_Sensor"/>
+        <obo:IAO_0000115 xml:lang="en">Ultrasonic sensors work on a principle similar to radar or sonar which evaluates attributes of a target by interpreting the echoes from radio or sound waves respectively.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://www.scribd.com/document/166448734/Ultrasonic-Sensor-Wikipedia-The-Free-Encyclopedia</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Ultrasonic Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Volume -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Volume">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000419"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Cubic_Centimeters"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">Volume is the quantity of three-dimensional space enclosed by a closed surface, for example, the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Volume</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Volume</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Wardrobe -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Wardrobe">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">A wardrobe or armoire is a standing closet used for storing clothes.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Wardrobe</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Wardrobe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Wavelength -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Wavelength">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000051"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000419"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Lambda"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">In physics, the wavelength is the spatial period of a periodic wave—the distance over which the wave&apos;s shape repeats.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Wavelength</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Wavelength</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Width -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Width">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000051"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000419"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Centimeters"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">The distance across something from one side to the other.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://dictionary.cambridge.org/us/dictionary/english/width</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Width</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#equipment -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#equipment">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <obo:IAO_0000115 xml:lang="en">Equipment most commonly refers to a set of tools or other objects commonly used to achieve a particular objective.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Equipment</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#HC-SR04 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/macedoj/robotics-domain-ontology#HC-SR04">
+        <rdf:type rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Ultrasonic_Sensor"/>
+        <obo:IAO_0000115 xml:lang="en">The HC-SR04 ultrasonic distance sensor uses sonar to determine distance to an object with stable readings and high accuracy of 3mm.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://classes.engineering.wustl.edu/ese205/core/index.php?title=Ultrasonic_Sensor_(HC-SR04)_%2B_Arduino</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">HC-SR04</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#MicaSense_RedEdge-MX -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/macedoj/robotics-domain-ontology#MicaSense_RedEdge-MX">
+        <rdf:type rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Multispectral_Sensor"/>
+        <obo:IAO_0000115 xml:lang="en">The RedEdge-MX is a rugged, built-to-last, professional multispectral sensor, now with a metallic enclosure for extreme durability. It captures the spectral bands required for basic crop health indexes and additional bands needed for advanced analytics.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://micasense.com/rededge-mx/</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">MicaSense RedEdge-MX</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Roborock_S6_MaxV -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/macedoj/robotics-domain-ontology#Roborock_S6_MaxV">
+        <rdf:type rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Robot"/>
+        <obo:IAO_0000115 xml:lang="en">The Roborock S6 MaxV is an autonomous robotic vacuum cleaner which has intelligent programming, equipped with twin cameras and obstacle avoidance system.</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://us.roborock.com/pages/roborock-s6-maxv</obo:IAO_0000119>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roborock S6 MaxV</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Velodyne_Alpha_Prime -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/macedoj/robotics-domain-ontology#Velodyne_Alpha_Prime">
+        <rdf:type rdf:resource="https://github.com/macedoj/robotics-domain-ontology#LiDAR"/>
+        <obo:IAO_0000115 xml:lang="en">The Alpha Prime delivers unrivaled combination of field-of-view, range, and image clarity. With the Alpha Prime™, Velodyne Lidar delivers the optimal long-range sensor for autonomous mobility. The Alpha Prime’s world-class combination of range, image clarity and field of view detects roadway objects with reliability and precision.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://velodynelidar.com/products/alpha-prime/</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Velodyne Alpha Prime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/macedoj/robotics-domain-ontology#Chair"/>
+            <rdf:Description rdf:about="https://github.com/macedoj/robotics-domain-ontology#Table"/>
+            <rdf:Description rdf:about="https://github.com/macedoj/robotics-domain-ontology#Wardrobe"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

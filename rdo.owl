@@ -16,16 +16,14 @@
     <owl:Ontology rdf:about="https://github.com/macedoj/robotics-domain-ontology">
         <owl:versionIRI rdf:resource="https://github.com/macedoj/robotics-domain-ontology/v0.0.1"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2020-06-10/iao.owl"/>
-        <rdo:comments xml:lang="en">It contains RDO-specific classes and axioms as well as imports from:
-	1. Information Artifact Ontology (IAO)
-	2. Units of Measurement Ontology (UO).</rdo:comments>
+        <rdo:comments xml:lang="en">It contains RDO-specific classes and axioms as well as imports from Information Artifact Ontology (IAO).</rdo:comments>
         <rdo:contributor xml:lang="en">Juliano Macedo</rdo:contributor>
         <rdo:defaultLenguage xml:lang="en">en</rdo:defaultLenguage>
         <rdo:description xml:lang="en">The Robotics Domain Ontology (RDO) describes the basic entities of a common Indoor Robot domain.</rdo:description>
         <rdo:license xml:lang="en">https://github.com/macedoj/robotics-domain-ontology/blob/master/LICENSE</rdo:license>
         <rdo:title xml:lang="en">Robotics Domain Ontology (RDO)</rdo:title>
-        <rdo:version xml:lang="en">0.0.1-SNAPSHOT</rdo:version>
-        <rdo:versionDate xml:lang="en">2020-07-26</rdo:versionDate>
+        <rdo:version xml:lang="en">2.0.0-RELEASE</rdo:version>
+        <rdo:versionDate xml:lang="en">2020-08-02</rdo:versionDate>
     </owl:Ontology>
     
 
@@ -201,13 +199,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Width"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Wavelength"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Robot_Environment"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Width"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
@@ -241,7 +239,7 @@
     <!-- https://github.com/macedoj/robotics-domain-ontology#Centimeters -->
 
     <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Centimeters">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000001"/>
         <obo:IAO_0000115 xml:lang="en">A centimetre (international spelling) or centimeter (American spelling) (SI symbol cm) is a unit of length in the metric system, equal to one hundredth of a metre, centi being the SI prefix for a factor of 1/100.</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Centimetre</obo:IAO_0000119>
         <rdfs:label xml:lang="en">Centimeters (cm)</rdfs:label>
@@ -397,6 +395,7 @@
 
     <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Obstacle">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <owl:disjointWith rdf:resource="https://github.com/macedoj/robotics-domain-ontology#equipment"/>
         <obo:IAO_0000115 xml:lang="en">An obstacle (also called a barrier, impediment, or stumbling block) is an object, thing, action or situation that causes an obstruction.</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Obstacle</obo:IAO_0000119>
         <rdfs:label xml:lang="en">Obstacle</rdfs:label>
@@ -407,7 +406,7 @@
     <!-- https://github.com/macedoj/robotics-domain-ontology#Physical_Environment -->
 
     <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Physical_Environment">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000028"/>
         <obo:IAO_0000115 xml:lang="en">The physical environment includes land, air, water, plants and animals, buildings and other infrastructure, and all of the natural resources that provide our basic needs and opportunities for social and economic development.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.socialreport.msd.govt.nz/2003/physical-environment/physical-environment.shtml</obo:IAO_0000119>
         <rdfs:label>Physical Environment</rdfs:label>
@@ -436,15 +435,17 @@
 
     <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Proximity_Sensor">
         <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Sensor"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/macedoj/robotics-domain-ontology#calculate_distance"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Obstacle"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A proximity sensor is a sensor able to detect the presence of nearby objects without any physical contact.</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Proximity_sensor</obo:IAO_0000119>
         <rdfs:label xml:lang="en">Proximity Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Roborock_S6_MaxV -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Roborock_S6_MaxV">
+        <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Robot"/>
     </owl:Class>
     
 
@@ -477,12 +478,6 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/macedoj/robotics-domain-ontology#operates_in"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Robot_Environment"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Sensor"/>
         <obo:IAO_0000115 xml:lang="en">A robot is a machine, especially one programmable by a computer, capable of carrying out a complex series of actions automatically.</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Robot</obo:IAO_0000119>
@@ -508,7 +503,7 @@
         <rdfs:subClassOf rdf:resource="https://github.com/macedoj/robotics-domain-ontology#equipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Robot"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -612,10 +607,21 @@
     <!-- https://github.com/macedoj/robotics-domain-ontology#equipment -->
 
     <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#equipment">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
         <obo:IAO_0000115 xml:lang="en">Equipment most commonly refers to a set of tools or other objects commonly used to achieve a particular objective.</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Equipment</obo:IAO_0000119>
         <rdfs:label xml:lang="en">Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/macedoj/robotics-domain-ontology#Indoor_Positioning_System_(IPS) -->
+
+    <owl:Class rdf:about="https://github.com/macedoj/robotics-domain-ontology#Indoor_Positioning_System_(IPS)">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
+        <obo:IAO_0000115 xml:lang="en">An indoor positioning system (IPS) is a network of devices used to locate people or objects where GPS and other satellite technologies lack precision or fail entirely, such as inside multistory buildings, airports, alleys, parking garages, and underground locations.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Indoor_positioning_system</obo:IAO_0000119>
+        <rdfs:label>Indoor Positioning System (IPS)</rdfs:label>
     </owl:Class>
     
 
@@ -655,12 +661,7 @@
 
     <!-- https://github.com/macedoj/robotics-domain-ontology#Roborock_S6_MaxV -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/macedoj/robotics-domain-ontology#Roborock_S6_MaxV">
-        <rdf:type rdf:resource="https://github.com/macedoj/robotics-domain-ontology#Robot"/>
-        <obo:IAO_0000115 xml:lang="en">The Roborock S6 MaxV is an autonomous robotic vacuum cleaner which has intelligent programming, equipped with twin cameras and obstacle avoidance system.</obo:IAO_0000115>
-        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://us.roborock.com/pages/roborock-s6-maxv</obo:IAO_0000119>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roborock S6 MaxV</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://github.com/macedoj/robotics-domain-ontology#Roborock_S6_MaxV"/>
     
 
 
@@ -678,6 +679,22 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://github.com/macedoj/robotics-domain-ontology#Roborock_S6_MaxV">
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://us.roborock.com/pages/roborock-s6-maxv</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">The Roborock S6 MaxV is an autonomous robotic vacuum cleaner which has intelligent programming, equipped with twin cameras and obstacle avoidance system.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roborock S6 MaxV</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // General axioms
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -689,6 +706,7 @@
             <rdf:Description rdf:about="https://github.com/macedoj/robotics-domain-ontology#Chair"/>
             <rdf:Description rdf:about="https://github.com/macedoj/robotics-domain-ontology#Table"/>
             <rdf:Description rdf:about="https://github.com/macedoj/robotics-domain-ontology#Wardrobe"/>
+            <rdf:Description rdf:about="https://github.com/macedoj/robotics-domain-ontology#equipment"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

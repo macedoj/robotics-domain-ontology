@@ -11,7 +11,7 @@ If you would like to use it, just download the **rdo.owl** file and import it in
 
 
 ## Disclaimer
-The RDO ontology was built during the Ontology Engineering class, from computer science master's degree of Federal University of Rio Grande do Sul, Brazil. It means that this is not a production ready ontology.
+The RDO ontology was built during the Ontology Engineering class, from a master's degree in Computer Science of the Federal University of Rio Grande do Sul, Brazil. It means that this is not a production-ready ontology.
 
 
 ## Collaborators
